@@ -53,9 +53,9 @@ RSpec.describe UserMatch, type: :model do
       allow(subject).to receive(:item_ids) { [37, 0, 42, 20, 41, 16] }
 
       expect(subject.items_with_timings.map(&:inspect)).to eq [
-        { :formatted_timing=>"-00:51", :item=>":item_circlet:", :timing=>-51 },
-        { :formatted_timing=>"02:26", :item=>":item_iron_branch:", :timing=>146 },
-        {:formatted_timing=>"-", :item=>":item_ghost_scepter:", :timing=>999999},
+        { formatted_timing: "-00:51", item: ":item_circlet:", timing: -51 },
+        { formatted_timing: "02:26", item: ":item_iron_branch:", timing: 146 },
+        { formatted_timing: "-", item: ":item_ghost_scepter:", timing: 999999 },
         { formatted_timing: "-", item: ":item_observer_ward:", timing: 999999 },
         { formatted_timing: "-", item: ":item_bottle:", timing: 999999 }
       ]
